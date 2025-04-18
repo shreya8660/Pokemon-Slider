@@ -1,2 +1,2 @@
-# Pokemon-Slider
-it is a image slider 
+# Pokemon-image-Slider
+a image slider 
