@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('img/Pokémon.jpeg') center/cover no-repeat;
+    filter: blur(20px);
+    -webkit-filter: blur(20px);
+    transform: scale(1.1);
+    z-index: -1;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    position: relative;
+    margin: 50px auto;
+  }
+  
+  .flex-card-wrapper {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 40px;
+  }
+  
+  .flex-card-container {
+    position: relative;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  
+  .flex-card-container.active {
+    flex: 5;
+    z-index: 10;
+  }
+  
+  .flex-card-container:not(.active) {
+    flex: 0.8;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2), transparent);
+  }
+  
+  h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+
+  /* Pokemon specific styles */
+  .poke-1 {
+    background: url('img/download\ \(8\).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .poke-2 {
+    background: url('img/download\ \(10\).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .poke-3 {
+    background: url('img/Squirtle.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .poke-4 {
+    background: url('img/Charmander\ \(1\).jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .poke-5 {
+    background: url('img/Bulbasaur.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  .poke-6 {
+    background: url('img/Charmeleon.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  .poke-7 {
+    background: url('img/Butterfree.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  .poke-8 {
+    background: url('img/Devil\ demon2\ movie\ Raichu\ Warner\ Bros\ Pictures\ Nintendo\ Studios\ GAME\ FREAK\ Creatures\ LEGENDARY.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  .poke-9 {
+    background: url('img/Cartoon\ &\ Co\ -\ Pokémon.jpeg') no-repeat center center;
+    background-size: cover;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .flex-card-wrapper {
+      height: 400px;
+    }
+    
+    h3 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flex-card-wrapper {
+      height: 350px;
+    }
+    
+    .flex-card-container:not(.active) {
+      flex: 0.5;
+    }
+    
+    h3 {
+      font-size: 1.8rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
